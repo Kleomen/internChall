@@ -3,8 +3,8 @@ import { FaSearch } from "react-icons/fa";
 
 export default  function SearchBar(){
     const [input,setInput] = useState("")
-    const [filteredTeams, setFilteredTeams] = useState([])
-    const [apiTeams, setApiTeams] = useState([])
+    const [filteredLeagues, setFilteredLeagues] = useState([])
+    const [apiLeagues, setApiLeagues] = useState([])
 
     
     useEffect(() => {
@@ -26,8 +26,8 @@ export default  function SearchBar(){
         .then(data => {
           //console.log("Fetched data:", data);
           const leagues = data.response.map(item => item.league);
-          setApiTeams(leagues);
-          setFilteredTeams(leagues);
+          setApiLeagues(leagues);
+          setFilteredLeagues(leagues);
         })
         .catch(err => console.log(err))
     }, [])
@@ -36,16 +36,15 @@ export default  function SearchBar(){
       const input = e.target.value;
       setInput(input);
 
-      const filteredTeams = apiTeams.filter((league) =>
+      const filteredLeagues = apiLeagues.filter((league) =>
         league.name && league.name.toLowerCase().includes(input.toLowerCase()));
 
-      //console.log(filteredTeams)
-      setFilteredTeams(filteredTeams);
+      //console.log(filteredLeagues)
+      setFilteredLeagues(filteredLeagues);
     }
     //console.log(process.env);
     
     return (
-      
       <div className="input-wrapper">
           <FaSearch id="search-icon" />
           <input
@@ -54,9 +53,8 @@ export default  function SearchBar(){
             onChange={handleInputChange}
           />
           
-          
         <div className="grid-container">
-        {filteredTeams.map(league => (
+        {filteredLeagues.map(league => (
           <a href={`/leagues/${league.id}`} className="grid-item" key={league.id}>
             <img src={league.logo} alt={league.name} className="league-logo" />
             <div className="league-name">{league.name}</div>
