@@ -1,0 +1,55 @@
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 2rem;
+  border: none;
+  border-radius: 10px;
+  padding: 0 15px;
+  box-shadow: 0px 0px 8px #ddd;
+  background-color: white;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  height: 80%;
+  width:100%;
+  font-size: 1.25rem;
+  margin-left: 5px;
+  margin-bottom: 30px;
+}
+
+input:focus {
+  outline: none;
+}
+
+#search-icon {
+  position: absolute;
+  left: 10px;
+  height:30px;
+  color: royalblue;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+  max-width: 800px;
+}
+
+
+.grid-item {
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+text-align: center;
+}
+
+.league-logo {
+width: 50px;
+height: 50px;
+object-fit: contain;
+margin-bottom: 10px;
+}
