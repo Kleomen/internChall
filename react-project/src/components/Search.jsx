@@ -12,7 +12,7 @@ export default  function SearchBar(){
       const options = {
         method: 'GET',
         headers: {
-          'x-rapidapi-key': 'e510b47e79msh110d5e6d11a1696p1f422djsnf86e6ac0c9c4',
+          'x-rapidapi-key': process.env.REACT_APP_API_KEY,
           'x-rapidapi-host': 'api-football-v1.p.rapidapi.com'
         }
     };
