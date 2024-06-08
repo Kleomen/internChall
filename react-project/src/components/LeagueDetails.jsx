@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-
+import { useParams, useNavigate } from 'react-router-dom';
 
 export default function LeagueDetail() {
   const { id } = useParams();
   const [league, setLeague] = useState(null);
   const [country,setCountry] = useState(null);
   const [seasons,setSeasons] = useState(null);
+  const navigate = useNavigate();
 
   
 
@@ -43,10 +43,11 @@ export default function LeagueDetail() {
 
   return (
     <div className="container">
+      <button onClick={() => navigate('/')}>Back to Search</button>
       <h1>{league.name}</h1>
       <img src={league.logo} alt={league.name} className="league-logo" />
-      <p>Type: {league.type}</p>
-      <div className="country-container">
+      <div className="info-container">
+        <p>Type: {league.type}</p>
         <p>Country: {country.name} ({country.code})</p>
         <p><img src={country.flag} alt={country.name} className="country-flag" /></p>
       </div>

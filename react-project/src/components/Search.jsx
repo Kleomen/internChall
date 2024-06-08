@@ -59,7 +59,7 @@ export default  function SearchBar(){
         {filteredTeams.map(league => (
           <a href={`/leagues/${league.id}`} className="grid-item" key={league.id}>
             <img src={league.logo} alt={league.name} className="league-logo" />
-            <div>{league.name}</div>
+            <div className="league-name">{league.name}</div>
           </a>
         ))}
         </div>

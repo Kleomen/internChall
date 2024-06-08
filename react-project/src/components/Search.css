@@ -53,3 +53,10 @@ height: 50px;
 object-fit: contain;
 margin-bottom: 10px;
 }
+
+.league-name{
+  width: 150px;
+  height: 50px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: large;
+}

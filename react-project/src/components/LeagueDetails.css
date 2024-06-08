@@ -11,21 +11,22 @@
   }
   
   .league-logo {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     object-fit: contain;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
   
   p {
     margin: 5px 0;
   }
   
-  .country-container {
+  .info-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+    font-size: larger;
   }
   
   .country-flag {
@@ -49,8 +50,21 @@
   }
   
   .season-details {
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: large;
     border: 1px solid #ccc;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+  }
+
+  button{
+    width: 200px;
+    height: 50px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: large;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 20px;
     background-color: #f9f9f9;
   }
